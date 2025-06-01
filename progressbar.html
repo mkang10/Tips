@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tiến độ xử lý</h2>
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <p id="progress-text">0% hoàn thành</p>
+
+      <div class="buttons">
+        <button onclick="setProgress(5)">5%</button>
+        <button onclick="setProgress(25)">25%</button>
+        <button onclick="setProgress(50)">50%</button>
+        <button onclick="setProgress(75)">75%</button>
+        <button onclick="setProgress(100)">100%</button>
+      </div>
+    </div>
+
+    <script>
+      function setProgress(percent) {
+        const bar = document.getElementById('progress-bar');
+        const text = document.getElementById('progress-text');
+        bar.style.width = percent + '%';
+        text.textContent = percent + '% hoàn thành';
+      }
+    </script>
+  </body>
+</html>
