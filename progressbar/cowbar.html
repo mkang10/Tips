@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress Bò Sữa Tinh Tế</title>
+  <link rel="stylesheet" href="cowbar.css" />
+</head>
+<body>
+  <div class="container">
+<h1 id="progress-title">🥛 Hành Trình Uống Sữa Bò</h1>
+    <div class="progress-wrapper">
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill">
+          <div class="milk-carton"></div>
+        </div>
+        <div class="cow-spots"></div>
+      </div>
+      <p id="progress-text">0%</p>
+    </div>
+    <div class="buttons">
+      <button onclick="setProgress(5)">5%</button>
+      <button onclick="setProgress(25)">25%</button>
+      <button onclick="setProgress(50)">50%</button>
+      <button onclick="setProgress(75)">75%</button>
+      <button onclick="setProgress(100)">100%</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

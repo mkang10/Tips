@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yêu Thương Đầy Dần</title>
+    <link rel="stylesheet" href="heartstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>💗 Chỉ số yêu thương</h1>
+      <div class="progress-wrapper">
+        <div class="progress-track">
+          <div id="progress-bar" class="progress-bar">
+            <div id="hearts" class="hearts"></div>
+          </div>
+        </div>
+        <p id="progress-text">0% yêu thương</p>
+      </div>
+      <div class="buttons">
+        <button onclick="setProgress(5)">5%</button>
+        <button onclick="setProgress(25)">25%</button>
+        <button onclick="setProgress(50)">50%</button>
+        <button onclick="setProgress(75)">75%</button>
+        <button onclick="setProgress(100)">100%</button>
+      </div>
+    </div>
+
+    <script>
+      function setProgress(percent) {
+        const bar = document.getElementById("progress-bar");
+        const text = document.getElementById("progress-text");
+        const hearts = document.getElementById("hearts");
+
+        bar.style.width = percent + "%";
+        text.textContent = percent + "% yêu thương";
+
+        hearts.innerHTML = "";
+        const heartCount = Math.floor(percent / 10);
+        for (let i = 0; i < heartCount; i++) {
+          const heart = document.createElement("span");
+          heart.textContent = "❤️";
+          heart.classList.add("heart");
+          heart.style.animationDelay = `${i * 0.1}s`;
+          hearts.appendChild(heart);
+        }
+      }
+    </script>
+  </body>
+</html>
